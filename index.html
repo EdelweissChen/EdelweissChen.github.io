@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-en="Chen Rushi | CS Undergraduate & AI Enthusiast" data-zh="陈儒石 | 计算机科学本科生 · AI 方向">Chen Rushi | CS Undergraduate & AI Enthusiast</title>
-<meta name="description" content="Chen Rushi (EdelweissChen) — CS undergraduate at Shihezi University. AI, multimodal LLMs, LoRA fine-tuning, embedded systems.">
-<meta property="og:title" content="Chen Rushi | Personal Homepage">
-<meta property="og:description" content="CS undergraduate at Shihezi University · AI & Multimodal LLMs">
+<title data-en="Rushi Chen | CS × AI — Personal Homepage" data-zh="陈儒石 | 计算机 × 人工智能 — 个人主页">Rushi Chen | CS × AI — Personal Homepage</title>
+<meta name="description" content="Rushi Chen (EdelweissChen) — CS undergraduate at Shihezi University. Multimodal AI, 3D vision, computational neuroscience × AI. IEEE MIPR 2024 author, first-inventor patents.">
+<meta property="og:title" content="Rushi Chen | Personal Homepage">
+<meta property="og:description" content="CS undergraduate @ Shihezi University · Multimodal AI · 3D Vision · Comp-Neuro × AI">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='28' font-weight='bold' text-anchor='middle' fill='%230d1117'%3EEC%3C/text%3E%3C/svg%3E">
 <style>
@@ -72,7 +72,7 @@
   .nav-links::-webkit-scrollbar{display:none}
   .nav-links a{
     color:var(--muted);text-decoration:none;font-size:14px;
-    padding:6px 12px;border-radius:8px;white-space:nowrap;transition:.2s;
+    padding:6px 11px;border-radius:8px;white-space:nowrap;transition:.2s;
   }
   .nav-links a:hover{color:var(--text);background:var(--bg-2)}
   .lang-btn{
@@ -83,7 +83,7 @@
   .lang-btn:hover{border-color:var(--cyan);background:rgba(34,211,238,.08)}
 
   /* ---------- hero ---------- */
-  header{padding:96px 0 72px}
+  header{padding:88px 0 64px}
   .hero{display:flex;align-items:center;gap:48px;flex-wrap:wrap}
   .hero-left{flex:1;min-width:300px}
   .status-pill{
@@ -99,8 +99,8 @@
   h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   .cursor{display:inline-block;width:.55em;height:1.05em;vertical-align:-.15em;margin-left:6px;background:var(--cyan);animation:blink 1.1s steps(1) infinite}
   @keyframes blink{50%{opacity:0}}
-  .hero-role{font-family:var(--mono);color:var(--violet);font-size:16px;margin:14px 0 10px}
-  .hero-sub{color:var(--muted);font-size:16px;max-width:560px}
+  .hero-role{font-family:var(--mono);color:var(--violet);font-size:15.5px;margin:14px 0 10px}
+  .hero-sub{color:var(--muted);font-size:16px;max-width:600px}
   .hero-btns{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
   .btn{
     text-decoration:none;font-size:15px;padding:11px 24px;border-radius:10px;
@@ -117,10 +117,10 @@
     background:var(--grad);
     box-shadow:0 0 60px rgba(34,211,238,.22),0 0 100px rgba(167,139,250,.15);
   }
-  /* 想换成真人照片：给 .avatar 加 <img> 或把 background 换成 url(照片路径) 并隐藏文字 */
+  /* 想换成真人照片：把 .avatar 内容换成 <img> 或把 background 换成 url(照片路径) */
 
   /* ---------- sections ---------- */
-  section{padding:64px 0;scroll-margin-top:70px}
+  section{padding:60px 0;scroll-margin-top:70px}
   .sec-title{font-size:26px;font-weight:800;margin-bottom:28px;display:flex;align-items:center;gap:12px}
   .sec-title .hash{font-family:var(--mono);font-weight:400;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   .sec-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent)}
@@ -133,7 +133,14 @@
 
   .about-text{color:var(--muted);font-size:16px}
   .about-text b,.about-text strong{color:var(--text)}
-  .about-text .hl{color:var(--cyan)}
+  .about-text + .about-text{margin-top:12px}
+  .about-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .about-chip{
+    font-size:13px;color:var(--muted);
+    border:1px dashed var(--border);border-radius:999px;padding:4px 14px;
+    transition:.2s;
+  }
+  .about-chip:hover{color:var(--violet);border-color:var(--violet)}
 
   .edu-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
   .edu-school{font-size:20px;font-weight:700}
@@ -141,32 +148,93 @@
   .edu-major{color:var(--text);margin:6px 0 4px;font-weight:600}
   .edu-note{color:var(--muted);font-size:14.5px}
 
-  .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  @media(max-width:760px){.proj-grid{grid-template-columns:1fr}}
+  .proj-grid{display:grid;grid-template-columns:1fr;gap:20px}
   .tag{
     display:inline-block;font-family:var(--mono);font-size:12px;
     color:var(--violet);border:1px solid rgba(167,139,250,.35);
     padding:2px 10px;border-radius:999px;margin-bottom:14px;
   }
-  .proj-title{font-size:18.5px;font-weight:700;margin-bottom:10px}
+  .tag.cyan{color:var(--cyan);border-color:rgba(34,211,238,.35)}
+  .proj-title{font-size:18.5px;font-weight:700;margin-bottom:6px}
+  .supervisor{font-size:13.5px;color:var(--cyan);font-family:var(--mono);margin-bottom:12px}
   .proj-desc{color:var(--muted);font-size:14.5px}
   .proj-meta{font-family:var(--mono);font-size:12.5px;color:var(--cyan);margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
   .proj-meta span{border:1px solid var(--border);border-radius:6px;padding:2px 8px}
   .proj-links{margin-top:16px;display:flex;gap:18px}
   .proj-links a{font-family:var(--mono);font-size:13.5px;color:var(--cyan);text-decoration:none}
   .proj-links a:hover{text-decoration:underline}
+  .stat-row{display:flex;gap:14px;margin-top:16px;flex-wrap:wrap}
+  .stat{
+    background:var(--bg-3);border:1px solid var(--border);border-radius:10px;
+    padding:10px 18px;text-align:center;min-width:110px;
+  }
+  .stat .num{font-family:var(--mono);font-size:20px;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat .lbl{font-size:12px;color:var(--muted)}
 
+  /* ---------- publications & patents ---------- */
+  .pub-item{
+    display:flex;gap:16px;align-items:flex-start;
+    background:var(--bg-2);border:1px solid var(--border);border-radius:12px;
+    padding:18px 20px;margin-bottom:12px;transition:.2s;
+  }
+  .pub-item:hover{border-color:rgba(34,211,238,.45)}
+  .pub-icon{font-size:18px;line-height:1.6;flex-shrink:0}
+  .pub-body{flex:1;min-width:0}
+  .pub-title{font-size:15px;font-weight:600;color:var(--text)}
+  .pub-title b{color:var(--cyan);font-weight:700}
+  .pub-venue{font-family:var(--mono);font-size:12.5px;color:var(--violet);margin-top:2px}
+  .pub-note{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:2px}
+  .pub-link{
+    font-family:var(--mono);font-size:12.5px;color:var(--cyan);text-decoration:none;white-space:nowrap;
+    border:1px solid var(--border);border-radius:8px;padding:5px 10px;flex-shrink:0;align-self:center;
+    transition:.2s;
+  }
+  .pub-link:hover{border-color:var(--cyan)}
+  .badge{
+    display:inline-block;font-family:var(--mono);font-size:11px;
+    color:var(--green);border:1px solid rgba(63,185,80,.4);
+    border-radius:999px;padding:1px 9px;margin-left:8px;vertical-align:1px;
+  }
+
+  /* ---------- experience timeline ---------- */
+  .xp-item{
+    position:relative;
+    background:var(--bg-2);border:1px solid var(--border);border-radius:12px;
+    padding:20px 24px;margin-bottom:14px;transition:.2s;
+  }
+  .xp-item:hover{border-color:rgba(34,211,238,.45);transform:translateX(4px)}
+  .xp-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+  .xp-role{font-size:16.5px;font-weight:700}
+  .xp-org{font-size:14px;color:var(--cyan)}
+  .xp-time{font-family:var(--mono);font-size:12.5px;color:var(--muted);white-space:nowrap}
+  .xp-desc{color:var(--muted);font-size:14px;margin-top:8px}
+
+  /* ---------- awards ---------- */
+  .award-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:760px){.award-grid{grid-template-columns:1fr}}
+  .award{
+    display:flex;align-items:center;gap:14px;
+    background:var(--bg-2);border:1px solid var(--border);border-radius:12px;
+    padding:16px 18px;transition:.2s;
+  }
+  .award:hover{border-color:rgba(167,139,250,.5);transform:translateY(-3px)}
+  .award .medal{font-size:22px}
+  .award .name{font-size:14.5px;font-weight:600}
+  .award .date{font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+  /* ---------- skills ---------- */
   .skill-group{margin-bottom:22px}
   .skill-group h3{font-size:15px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
   .skill-group h3::before{content:"▸";color:var(--cyan);font-family:var(--mono)}
   .chips{display:flex;flex-wrap:wrap;gap:10px}
   .chip{
-    font-family:var(--mono);font-size:13.5px;color:var(--text);
+    font-family:var(--mono);font-size:13px;color:var(--text);
     background:var(--bg-3);border:1px solid var(--border);
     padding:6px 14px;border-radius:8px;transition:.2s;
   }
   .chip:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
 
+  /* ---------- contact ---------- */
   .contact-list{display:flex;flex-direction:column;gap:14px}
   .contact-item{
     display:flex;align-items:center;gap:14px;flex-wrap:wrap;
@@ -213,7 +281,9 @@
       <a href="#about" data-en="About" data-zh="关于">About</a>
       <a href="#education" data-en="Education" data-zh="教育">Education</a>
       <a href="#research" data-en="Research" data-zh="科研">Research</a>
-      <a href="#projects" data-en="Projects" data-zh="项目">Projects</a>
+      <a href="#pubs" data-en="Papers" data-zh="论文专利">Papers</a>
+      <a href="#experience" data-en="Experience" data-zh="经历">Experience</a>
+      <a href="#awards" data-en="Awards" data-zh="奖项">Awards</a>
       <a href="#skills" data-en="Skills" data-zh="技能">Skills</a>
       <a href="#contact" data-en="Contact" data-zh="联系">Contact</a>
     </div>
@@ -227,14 +297,14 @@
     <div class="hero-left">
       <div class="status-pill">
         <span class="dot"></span>
-        <span data-en="Open to internships &amp; graduate opportunities" data-zh="开放实习与深造机会">Open to internships &amp; graduate opportunities</span>
+        <span data-en="Seeking CS / EE MS programs · Fall 2027" data-zh="申请 CS / EE 硕士项目 · 2027 秋入学">Seeking CS / EE MS programs · Fall 2027</span>
       </div>
       <div class="hero-greet" data-en="&gt; Hello, I'm" data-zh="&gt; 你好，我是">&gt; Hello, I'm</div>
       <h1>
-        <span class="g" data-en="Chen Rushi" data-zh="陈儒石">Chen Rushi</span><span class="cursor"></span>
+        <span class="g" data-en="Rushi Chen" data-zh="陈儒石">Rushi Chen</span><span class="cursor"></span>
       </h1>
-      <div class="hero-role" data-en="CS Undergraduate · AI · Multimodal LLM Explorer" data-zh="计算机科学本科生 · 人工智能 · 多模态大模型探索者">CS Undergraduate · AI · Multimodal LLM Explorer</div>
-      <p class="hero-sub" data-en="B.Eng. in Computer Science &amp; Technology @ Shihezi University, Class of 2027. I fine-tune multimodal large language models and build engineering systems end-to-end." data-zh="石河子大学 计算机科学与技术专业 2027 届本科生。研究方向为多模态大语言模型微调，同时热衷于端到端的工程系统开发。">B.Eng. in Computer Science &amp; Technology @ Shihezi University, Class of 2027. I fine-tune multimodal large language models and build engineering systems end-to-end.</p>
+      <div class="hero-role" data-en="Comp-Neuro × AI · HCI · Robotics · 3D Vision" data-zh="计算神经 × AI · 人机交互 · 机器人 · 三维视觉">Comp-Neuro × AI · HCI · Robotics · 3D Vision</div>
+      <p class="hero-sub" data-en="B.Eng. in Computer Science @ Shihezi University, Class of 2027. I build multimodal AI systems and 3D vision pipelines — and explore how biological perception can inspire human-centered AI." data-zh="石河子大学计算机科学与技术 2027 届本科生。做过多模态 AI 系统与三维视觉流水线，也在探索生物感知机制如何启发以人为中心的人工智能。">B.Eng. in Computer Science @ Shihezi University, Class of 2027. I build multimodal AI systems and 3D vision pipelines — and explore how biological perception can inspire human-centered AI.</p>
       <div class="hero-btns">
         <a class="btn btn-primary" href="#research" data-en="View Research ↓" data-zh="查看科研经历 ↓">View Research ↓</a>
         <a class="btn btn-ghost" href="https://github.com/EdelweissChen" target="_blank" rel="noopener" data-en="GitHub →" data-zh="GitHub →">GitHub →</a>
@@ -247,8 +317,15 @@
 <!-- ================= 关于 ABOUT ================= -->
 <section id="about" class="wrap reveal">
   <h2 class="sec-title"><span class="hash">#</span><span data-en="About Me" data-zh="关于我">About Me</span></h2>
-  <div class="card about-text">
-    <p data-en="I'm Chen Rushi (GitHub: EdelweissChen), a senior undergraduate in Computer Science &amp; Technology at Shihezi University. My interest lies in artificial intelligence — especially multimodal large language models and their efficient adaptation (LoRA) to real-world tasks such as document and check image understanding. Beyond research, I enjoy building engineering systems end-to-end, from embedded measurement-and-control devices to web pages like this one. I'm currently seeking research opportunities, graduate programs, and internships." data-zh="我是陈儒石（GitHub：EdelweissChen），石河子大学计算机科学与技术专业本科生。我的兴趣方向是人工智能，尤其是多模态大语言模型及其高效微调技术（LoRA）在票据等文档图像理解任务中的应用。科研之外，我也喜欢动手做端到端的工程系统——从嵌入式测控设备到像这个主页一样的网页。目前正在寻找科研机会、研究生项目与实习。">I'm Chen Rushi (GitHub: EdelweissChen), a senior undergraduate in Computer Science &amp; Technology at Shihezi University. My interest lies in artificial intelligence — especially multimodal large language models and their efficient adaptation (LoRA) to real-world tasks such as document and check image understanding. Beyond research, I enjoy building engineering systems end-to-end, from embedded measurement-and-control devices to web pages like this one. I'm currently seeking research opportunities, graduate programs, and internships.</p>
+  <div class="card">
+    <p class="about-text" data-en="I'm Rushi Chen, a senior CS undergraduate at Shihezi University. My work spans multimodal AI and 3D vision: I co-authored a LoRA-adapted multimodal LLM framework for check analysis (IEEE MIPR 2024), and independently built a monocular SfM pipeline for quantitative 3D foot measurement at the Institute of Automation, Chinese Academy of Sciences. I also hold five Chinese patent filings, one as first inventor." data-zh="我是陈儒石，石河子大学计算机科学与技术专业本科生。我的工作横跨多模态 AI 与三维视觉：以共同作者身份参与 LoRA 适配多模态大模型支票解析框架（IEEE MIPR 2024），并在中国科学院自动化研究所独立完成基于单目 SfM 的足部三维量化测量流水线。我还有五项中国专利申请，其中一项为第一发明人。">placeholder</p>
+    <p class="about-text" data-en="My long-term interest lies at the intersection of computational neuroscience and AI: I believe biologically-inspired perception–action circuits can inform world models that make robots and agents truly human-centered — augmenting people rather than replacing them, with humans keeping final control. Alongside research, I ship real systems: a Linux transparent HTTPS gateway, industrial monitoring software, and 100+ documented test cases on a coding platform." data-zh="我的长期兴趣在计算神经科学与 AI 的交叉点：我相信生物启发的感知—运动环路能为世界模型提供新思路，让机器人与智能体真正以人为中心——增强人而非替代人，并保留人类的最终控制权。科研之外我也交付真实系统：Linux 透明 HTTPS 网关、工业监控软件，以及在编程平台上编写过的 100+ 测试用例。">placeholder</p>
+    <div class="about-chips">
+      <span class="about-chip" data-en="🏃 Trail running &amp; hiking" data-zh="🏃 越野跑与登山徒步">🏃 Trail running &amp; hiking</span>
+      <span class="about-chip" data-en="🧠 Self-taught psychology" data-zh="🧠 自学心理学">🧠 Self-taught psychology</span>
+      <span class="about-chip" data-en="🎤 12 sessions of AI-literacy lectures for retirees" data-zh="🎤 面向退休教职工的 12 期 AI 科普讲座">🎤 12 sessions of AI-literacy lectures for retirees</span>
+      <span class="about-chip" data-en="🌍 Half-year school days in Uganda" data-zh="🌍 乌干达就读半年">🌍 Half-year school days in Uganda</span>
+    </div>
   </div>
 </section>
 
@@ -260,54 +337,178 @@
       <span class="edu-school" data-en="Shihezi University" data-zh="石河子大学">Shihezi University</span>
       <span class="edu-time" data-en="Sep 2023 — Jun 2027 (expected)" data-zh="2023.09 — 2027.06（预计）">Sep 2023 — Jun 2027 (expected)</span>
     </div>
-    <p class="edu-major" data-en="B.Eng. in Computer Science &amp; Technology" data-zh="计算机科学与技术 · 本科">B.Eng. in Computer Science &amp; Technology</p>
-    <p class="edu-note" data-en="A national &quot;Project 211&quot; university · Focus: artificial intelligence, multimodal large language models" data-zh="国家&quot;211 工程&quot;重点建设高校 · 研究方向：人工智能、多模态大语言模型">A national "Project 211" university · Focus: artificial intelligence, multimodal large language models</p>
+    <p class="edu-major" data-en="B.Eng. in Computer Science and Technology" data-zh="计算机科学与技术 · 本科">B.Eng. in Computer Science and Technology</p>
+    <p class="edu-note" data-en="A national &quot;Project 211&quot; university · Core coursework: Programming, Data Structures, Algorithms, Computer Vision, Databases · Self-studied sensors &amp; 3D-reconstruction hardware constraints beyond the software-focused curriculum" data-zh="国家&quot;211 工程&quot;高校 · 核心课程：程序设计、数据结构、算法、计算机视觉、数据库 · 课外自学补足传感器与三维重建设备等硬件知识">A national "Project 211" university · Core coursework: Programming, Data Structures, Algorithms, Computer Vision, Databases · Self-studied sensors &amp; 3D-reconstruction hardware constraints beyond the software-focused curriculum</p>
   </div>
 </section>
 
 <!-- ================= 科研 RESEARCH ================= -->
 <section id="research" class="wrap reveal">
   <h2 class="sec-title"><span class="hash">#</span><span data-en="Research" data-zh="科研经历">Research</span></h2>
-  <div class="card">
-    <span class="tag" data-en="Research · Paper · 2026" data-zh="科研 · 论文 · 2026">Research · Paper · 2026</span>
-    <div class="proj-title">GenCheck: A LoRA-Adapted Multimodal Large Language Model for Check Analysis</div>
-    <p class="proj-desc" data-en="Adapted a multimodal large language model with LoRA for financial check analysis: the model reads check images, extracts key structured fields, and performs intelligent validation — achieving task-specific performance at a fraction of the cost of full fine-tuning." data-zh="基于 LoRA 对多模态大语言模型进行领域适配，用于金融支票图像分析：模型读取支票图像，抽取关键结构化字段并进行智能校验，以远低于全量微调的成本获得面向任务的表现。">Adapted a multimodal large language model with LoRA for financial check analysis: the model reads check images, extracts key structured fields, and performs intelligent validation — achieving task-specific performance at a fraction of the cost of full fine-tuning.</p>
-    <div class="proj-meta">
-      <span>LoRA</span><span>Multimodal LLM</span><span>Fine-tuning</span><span>Document AI</span>
-    </div>
-    <!-- 论文链接写好后，把下面 href="#" 换成 PDF 链接（如 arXiv 或仓库内文件） -->
-    <div class="proj-links">
-      <a href="#" data-en="[ Paper PDF ]" data-zh="[ 论文 PDF ]">[ Paper PDF ]</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 项目 PROJECTS ================= -->
-<section id="projects" class="wrap reveal">
-  <h2 class="sec-title"><span class="hash">#</span><span data-en="Projects" data-zh="项目经历">Projects</span></h2>
   <div class="proj-grid">
 
     <div class="card">
-      <span class="tag" data-en="Embedded System" data-zh="嵌入式系统">Embedded System</span>
-      <div class="proj-title" data-en="Hydropower Station Water-Level Monitoring &amp; Control System" data-zh="水电站水位测控系统">Hydropower Station Water-Level Monitoring &amp; Control System</div>
-      <p class="proj-desc" data-en="An embedded measurement-and-control system for hydropower stations: real-time water-level acquisition, automatic pump/gate control based on configurable thresholds, and over-limit alerting — including sensor calibration and a human-machine interface." data-zh="面向水电站的嵌入式测控系统：实时水位采集、基于可配置阈值的自动控制（水泵/闸门）与越限报警，包含传感器校准与人机交互界面。">An embedded measurement-and-control system for hydropower stations: real-time water-level acquisition, automatic pump/gate control based on configurable thresholds, and over-limit alerting — including sensor calibration and a human-machine interface.</p>
+      <span class="tag cyan" data-en="Independent Research · CASIA" data-zh="独立科研 · 中科院自动化所">Independent Research · CASIA</span>
+      <div class="proj-title" data-en="Low-Cost Monocular 3D Reconstruction and Quantitative Measurement of Foot Soft Tissue" data-zh="基于单目视觉的足部软组织低成本三维重建与量化测量">Low-Cost Monocular 3D Reconstruction and Quantitative Measurement of Foot Soft Tissue</div>
+      <div class="supervisor" data-en="Supervisor: Prof. Zhenan Sun, Institute of Automation, Chinese Academy of Sciences · May 2025 — May 2026" data-zh="指导教师：孙哲南 研究员，中国科学院自动化研究所 · 2025.05 — 2026.05">Supervisor: Prof. Zhenan Sun, Institute of Automation, Chinese Academy of Sciences · May 2025 — May 2026</div>
+      <p class="proj-desc" data-en="Replaced expensive 3D scanners with an ordinary monocular camera: independently designed the complete pipeline — field video acquisition, SfM reconstruction with COLMAP, DBSCAN point-cloud denoising, and an ID-card reference-object calibration scheme that resolves scale ambiguity. Validated on 18 human samples toward low-cost footwear customization and foot-health screening." data-zh="用普通单目相机替代昂贵三维扫描设备：独立设计完整流水线——实地视频采集、COLMAP SfM 重建、DBSCAN 点云聚类降噪、身份证参照物标定解决尺度缺失问题。面向鞋履定制与足部健康筛查，在 18 组人体样本上完成实测验证。">Replaced expensive 3D scanners with an ordinary monocular camera: independently designed the complete pipeline — field video acquisition, SfM reconstruction with COLMAP, DBSCAN point-cloud denoising, and an ID-card reference-object calibration scheme that resolves scale ambiguity. Validated on 18 human samples toward low-cost footwear customization and foot-health screening.</p>
+      <div class="stat-row">
+        <div class="stat"><div class="num">18</div><div class="lbl" data-en="human samples" data-zh="人体样本">human samples</div></div>
+        <div class="stat"><div class="num">3.83%</div><div class="lbl" data-en="foot-length mean error" data-zh="足长平均误差">foot-length mean error</div></div>
+        <div class="stat"><div class="num">5.71%</div><div class="lbl" data-en="foot-width mean error" data-zh="足宽平均误差">foot-width mean error</div></div>
+      </div>
       <div class="proj-meta">
-        <span>Embedded C</span><span>MCU</span><span>Sensors</span><span>Auto-Control</span>
+        <span>SfM</span><span>COLMAP</span><span>DBSCAN</span><span>Scale Calibration</span>
       </div>
     </div>
 
     <div class="card">
-      <span class="tag" data-en="Web · This Site" data-zh="Web · 本站">Web · This Site</span>
-      <div class="proj-title" data-en="Personal Homepage (Bilingual)" data-zh="个人主页（中英双语）">Personal Homepage (Bilingual)</div>
-      <p class="proj-desc" data-en="The page you are reading — a bilingual (EN/中文), single-file homepage with dark-tech aesthetics. Pure HTML/CSS/JS: zero frameworks, zero dependencies, hosted on GitHub Pages." data-zh="你现在看到的这个页面——单文件、中英双语、深色科技风的个人主页。纯 HTML/CSS/JS 实现，零框架零依赖，托管于 GitHub Pages。">The page you are reading — a bilingual (EN/中文), single-file homepage with dark-tech aesthetics. Pure HTML/CSS/JS: zero frameworks, zero dependencies, hosted on GitHub Pages.</p>
+      <span class="tag cyan" data-en="Research · UAB, USA" data-zh="科研 · 美国阿拉巴马大学伯明翰分校">Research · UAB, USA</span>
+      <div class="proj-title">GenCheck: A LoRA-Adapted Multimodal Large Language Model for Check Analysis</div>
+      <div class="supervisor" data-en="Supervisor: Prof. Chengcui Zhang, University of Alabama at Birmingham · Jan 2024 — Mar 2024" data-zh="指导教师：张成萃 教授，美国阿拉巴马大学伯明翰分校 · 2024.01 — 2024.03">Supervisor: Prof. Chengcui Zhang, University of Alabama at Birmingham · Jan 2024 — Mar 2024</div>
+      <p class="proj-desc" data-en="A two-stage framework for financial anti-fraud: Segment Anything separates overlapping checks, a coarse-to-fine pipeline rectifies rotation and perspective distortion, and YOLOv8 models handle classification and element localization; a LoRA-finetuned LLaVA-NeXT then extracts handwritten date, amount, and payee via visual question answering — clearly outperforming traditional OCR and zero-shot MLLM baselines. I built the data pipeline: preprocessing, annotation guidelines, and the multi-task dataset of 8,689 real check images." data-zh="面向金融反诈的两阶段框架：Segment Anything 分割重叠支票，粗—细两级流程矫正旋转与透视畸变，YOLOv8 完成分类与元素定位；再由 LoRA 微调的 LLaVA-NeXT 通过视觉问答提取手写日期、金额与收款人——显著优于传统 OCR 与零样本多模态大模型基线。我负责数据流水线：预处理、标注规范与 8689 张真实支票图像的多任务数据集构建。">A two-stage framework for financial anti-fraud: Segment Anything separates overlapping checks, a coarse-to-fine pipeline rectifies rotation and perspective distortion, and YOLOv8 models handle classification and element localization; a LoRA-finetuned LLaVA-NeXT then extracts handwritten date, amount, and payee via visual question answering — clearly outperforming traditional OCR and zero-shot MLLM baselines. I built the data pipeline: preprocessing, annotation guidelines, and the multi-task dataset of 8,689 real check images.</p>
       <div class="proj-meta">
-        <span>HTML/CSS/JS</span><span>i18n</span><span>GitHub Pages</span>
+        <span>LoRA</span><span>LLaVA-NeXT</span><span>YOLOv8</span><span>Segment Anything</span>
       </div>
       <div class="proj-links">
-        <a href="https://github.com/EdelweissChen/EdelweissChen.github.io" target="_blank" rel="noopener" data-en="[ Source ]" data-zh="[ 源码 ]">[ Source ]</a>
+        <a href="https://doi.org/10.1109/MIPR62202.2024.00021" target="_blank" rel="noopener" data-en="[ Paper @ IEEE MIPR 2024 ]" data-zh="[ 论文 @ IEEE MIPR 2024 ]">[ Paper @ IEEE MIPR 2024 ]</a>
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ================= 论文与专利 PUBLICATIONS & PATENTS ================= -->
+<section id="pubs" class="wrap reveal">
+  <h2 class="sec-title"><span class="hash">#</span><span data-en="Publications &amp; Patents" data-zh="论文与专利">Publications &amp; Patents</span></h2>
+
+  <div class="pub-item">
+    <div class="pub-icon">📄</div>
+    <div class="pub-body">
+      <div class="pub-title">F. Zhao, J. Chen, B. Huang, C. Zhang, G. Warner, <b>R. Chen</b>, S. Tang, Y. Ma, Z. Nan. GenCheck: A LoRA-Adapted Multimodal Large Language Model for Check Analysis.</div>
+      <div class="pub-venue">IEEE 7th Int. Conf. on Multimedia Information Processing and Retrieval (MIPR), San Jose, CA, 2024, pp. 88–94</div>
+    </div>
+    <a class="pub-link" href="https://doi.org/10.1109/MIPR62202.2024.00021" target="_blank" rel="noopener">DOI ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-icon">🛠️</div>
+    <div class="pub-body">
+      <div class="pub-title"><span data-en="A Voice Interaction Method, Apparatus, and Device" data-zh="《一种语音交互方法、装置及设备》">A Voice Interaction Method, Apparatus, and Device</span><span class="badge" data-en="First Inventor · Under Examination" data-zh="第一发明人 · 实质审查中">First Inventor · Under Examination</span></div>
+      <div class="pub-note">CN121483249A · R. Chen, M. Yao, J. Chen</div>
+    </div>
+    <a class="pub-link" href="https://patents.google.com/patent/CN121483249A" target="_blank" rel="noopener">Patent ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-icon">🛠️</div>
+    <div class="pub-body">
+      <div class="pub-title"><span data-en="An Interactive Digital Human Generation Method, Apparatus, Device, Medium and Product" data-zh="《一种交互式数字人生成方法、装置、设备、介质及产品》">An Interactive Digital Human Generation Method, Apparatus, Device, Medium and Product</span></div>
+      <div class="pub-note">CN121303179A · C. Lei, R. Chen, M. Yao, J. Chen</div>
+    </div>
+    <a class="pub-link" href="https://patents.google.com/patent/CN121303179A" target="_blank" rel="noopener">Patent ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-icon">🛠️</div>
+    <div class="pub-body">
+      <div class="pub-title"><span data-en="A Portable Intelligent Drill Device" data-zh="《一种便携式智能钻孔装置》">A Portable Intelligent Drill Device</span></div>
+      <div class="pub-note">CN121078188A · H. Chen, R. Chen, Z. Zhuang</div>
+    </div>
+    <a class="pub-link" href="https://patents.google.com/patent/CN121078188A" target="_blank" rel="noopener">Patent ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-icon">🛠️</div>
+    <div class="pub-body">
+      <div class="pub-title"><span data-en="A Research–Application Integrated Teaching System and Method Based on Human–AI Engine Co-Design" data-zh="《一种基于人智引擎协同设计的研究应用一体化教学系统及方法》">A Research–Application Integrated Teaching System and Method Based on Human–AI Engine Co-Design</span></div>
+      <div class="pub-note">CN122175264A · L. Liu, B. Huang, Y. Ma, R. Chen</div>
+    </div>
+    <a class="pub-link" href="https://patents.google.com/patent/CN122175264A" target="_blank" rel="noopener">Patent ↗</a>
+  </div>
+</section>
+
+<!-- ================= 实习与工作 EXPERIENCE ================= -->
+<section id="experience" class="wrap reveal">
+  <h2 class="sec-title"><span class="hash">#</span><span data-en="Experience" data-zh="实习与工作">Experience</span></h2>
+
+  <div class="xp-item">
+    <div class="xp-head">
+      <div>
+        <span class="xp-role" data-en="Independent Developer" data-zh="独立开发">Independent Developer</span>
+        <span class="xp-org" data-en=" · Beijing Jizhi Xinghuo Technology" data-zh=" · 北京机智星火科技"> · Beijing Jizhi Xinghuo Technology</span>
+      </div>
+      <span class="xp-time">2026.07 — 2026.10</span>
+    </div>
+    <p class="xp-desc" data-en="Designed and shipped a Linux transparent HTTPS proxy gateway end-to-end: Netfilter/iptables + TPROXY traffic interception, Squid SSL-Bump TLS decryption with SNI black/white-listing, NAT / router / proxy-ARP networking modes, a web admin console (config, log audit, bulk import &amp; grouping), Ansible offline batch deployment, and tcpdump/Wireshark packet-level debugging with bandwidth &amp; concurrency testing." data-zh="独立设计并交付基于 Linux 的透明 HTTPS 代理网关：Netfilter/iptables + TPROXY 流量劫持、Squid SSL-Bump 解密与 SNI 域名黑白名单、NAT / 路由 / Proxy ARP 多网络模式、Web 管理后台（配置管理、日志审计、批量导入分组）、Ansible 离线批量部署，以及 tcpdump/Wireshark 抓包调试与带宽并发性能测试。">Designed and shipped a Linux transparent HTTPS proxy gateway end-to-end.</p>
+  </div>
+
+  <div class="xp-item">
+    <div class="xp-head">
+      <div>
+        <span class="xp-role" data-en="Patent Engineer Intern" data-zh="专利工程师实习生">Patent Engineer Intern</span>
+        <span class="xp-org" data-en=" · Wuhan Academy of Artificial Intelligence" data-zh=" · 武汉人工智能研究院"> · Wuhan Academy of Artificial Intelligence</span>
+      </div>
+      <span class="xp-time">2025.07 — 2025.08</span>
+    </div>
+    <p class="xp-desc" data-en="Prior-art search and technology research on digital-human voice interaction; designed the core inventive scheme and filed CN121483249A as first inventor; co-drafted two additional technical disclosure documents." data-zh="开展数字人语音交互方向专利检索与技术调研；独立设计核心创新方案并以第一发明人提交 CN121483249A；协助撰写另外两份专利技术交底书。">Prior-art search and technology research on digital-human voice interaction.</p>
+  </div>
+
+  <div class="xp-item">
+    <div class="xp-head">
+      <div>
+        <span class="xp-role" data-en="Test Development Intern" data-zh="测试开发实习生">Test Development Intern</span>
+        <span class="xp-org" data-en=" · Beijing Kenkeding Technology" data-zh=" · 北京垦科鼎技术"> · Beijing Kenkeding Technology</span>
+      </div>
+      <span class="xp-time">2024.07 — 2024.08</span>
+    </div>
+    <p class="xp-desc" data-en="Black-box functional testing for the Kencoding online coding platform: independently wrote 100+ test cases covering workflows, boundary conditions, and abnormal inputs; located and reported 20+ defects; ran regression retests to closure." data-zh="负责 Kencoding 在线刷题平台黑盒功能测试：独立编写 100+ 测试用例（业务流程/边界条件/异常输入），定位上报 20+ 缺陷，完成回归复测闭环与测试文档归档。">Black-box functional testing for the Kencoding online coding platform.</p>
+  </div>
+
+  <div class="xp-item">
+    <div class="xp-head">
+      <div>
+        <span class="xp-role" data-en="Software Development Practice" data-zh="软件开发实践">Software Development Practice</span>
+        <span class="xp-org" data-en=" · Shimian Huitonggou Electric Power, Sichuan" data-zh=" · 石棉县汇同沟电力（四川）"> · Shimian Huitonggou Electric Power, Sichuan</span>
+      </div>
+      <span class="xp-time">2019</span>
+    </div>
+    <p class="xp-desc" data-en="Built hydropower-station water-level monitoring software with VC++/MFC: parsed RS232 serial data per the vendor's protocol, real-time level visualization, and over-limit automatic alarms — my first complete software–hardware integration project, debugged on site for communication exceptions." data-zh="基于 VC++/MFC 开发水电站水位监控上位机：按厂商协议解析 RS232 串口数据、水位实时可视化、超限自动报警——第一段完整的软硬件协同项目，现场调试处理通信异常。">Built hydropower-station water-level monitoring software with VC++/MFC.</p>
+  </div>
+</section>
+
+<!-- ================= 获奖 AWARDS ================= -->
+<section id="awards" class="wrap reveal">
+  <h2 class="sec-title"><span class="hash">#</span><span data-en="Awards" data-zh="获奖经历">Awards</span></h2>
+  <div class="award-grid">
+    <div class="award">
+      <span class="medal">🥉</span>
+      <div>
+        <div class="name" data-en="CCPC Xinjiang Regional Contest · Bronze Medal" data-zh="中国大学生程序设计竞赛（CCPC）新疆赛区 · 铜奖">CCPC Xinjiang Regional Contest · Bronze Medal</div>
+        <div class="date">2024.11</div>
+      </div>
+    </div>
+    <div class="award">
+      <span class="medal">🏅</span>
+      <div>
+        <div class="name" data-en="Lanqiao Cup National Software Contest · Provincial 2nd Prize" data-zh="蓝桥杯全国软件和信息技术专业人才大赛 · 省级二等奖">Lanqiao Cup National Software Contest · Provincial 2nd Prize</div>
+        <div class="date">2024.04</div>
+      </div>
+    </div>
+    <div class="award">
+      <span class="medal">🏅</span>
+      <div>
+        <div class="name" data-en="ICPC University Preliminary Contest · 2nd Prize" data-zh="ICPC 国际大学生程序设计竞赛校级选拔赛 · 二等奖">ICPC University Preliminary Contest · 2nd Prize</div>
+        <div class="date">2024.10</div>
+      </div>
+    </div>
+    <div class="award">
+      <span class="medal">🏅</span>
+      <div>
+        <div class="name" data-en="Mat Cup National Collegiate Programming Contest · Provincial 3rd Prize" data-zh="马蹄杯全国大学生程序设计竞赛 · 省级三等奖">Mat Cup National Collegiate Programming Contest · Provincial 3rd Prize</div>
+        <div class="date">2025.08</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -317,15 +518,19 @@
   <div class="card">
     <div class="skill-group">
       <h3 data-en="Programming" data-zh="编程语言">Programming</h3>
-      <div class="chips"><span class="chip">Python</span><span class="chip">C / C++</span><span class="chip">SQL</span><span class="chip">JavaScript</span></div>
+      <div class="chips"><span class="chip">C / C++</span><span class="chip">Python</span><span class="chip">Java</span><span class="chip">SQL</span><span class="chip">JavaScript</span></div>
     </div>
     <div class="skill-group">
-      <h3 data-en="AI &amp; Machine Learning" data-zh="人工智能与机器学习">AI &amp; Machine Learning</h3>
-      <div class="chips"><span class="chip">PyTorch</span><span class="chip">LoRA Fine-tuning</span><span class="chip">Multimodal LLM</span><span class="chip">Prompt Engineering</span></div>
+      <h3 data-en="AI &amp; 3D Vision" data-zh="AI 与三维视觉">AI &amp; 3D Vision</h3>
+      <div class="chips"><span class="chip">PyTorch</span><span class="chip">LoRA Fine-tuning</span><span class="chip">LLaVA-NeXT</span><span class="chip">YOLOv8</span><span class="chip">Segment Anything</span><span class="chip">COLMAP · SfM</span><span class="chip">Point Cloud · DBSCAN</span></div>
+    </div>
+    <div class="skill-group">
+      <h3 data-en="Systems &amp; Tooling" data-zh="系统与工具">Systems &amp; Tooling</h3>
+      <div class="chips"><span class="chip">Linux</span><span class="chip">Netfilter · TPROXY</span><span class="chip">Squid</span><span class="chip">Ansible</span><span class="chip">tcpdump · Wireshark</span><span class="chip">Git</span></div>
     </div>
     <div class="skill-group" style="margin-bottom:0">
-      <h3 data-en="Tools &amp; Web" data-zh="工具与 Web">Tools &amp; Web</h3>
-      <div class="chips"><span class="chip">Git &amp; GitHub</span><span class="chip">Linux</span><span class="chip">HTML / CSS</span><span class="chip">VS Code</span></div>
+      <h3 data-en="Beyond Code" data-zh="代码之外">Beyond Code</h3>
+      <div class="chips"><span class="chip" data-en="Patent Drafting" data-zh="专利撰写">Patent Drafting</span><span class="chip" data-en="Software Testing" data-zh="软件测试">Software Testing</span><span class="chip">HTML / CSS / JS</span><span class="chip" data-en="Circuit Soldering &amp; Fiber Splicing" data-zh="电路焊接与光纤熔接">Circuit Soldering &amp; Fiber Splicing</span></div>
     </div>
   </div>
 </section>
@@ -333,17 +538,17 @@
 <!-- ================= 联系 CONTACT ================= -->
 <section id="contact" class="wrap reveal">
   <h2 class="sec-title"><span class="hash">#</span><span data-en="Contact" data-zh="联系方式">Contact</span></h2>
-  <p class="about-text" style="margin-bottom:22px" data-en="Feel free to reach out — the fastest way is email. I usually reply within 24 hours." data-zh="欢迎通过邮件联系我，通常 24 小时内回复。">Feel free to reach out — the fastest way is email. I usually reply within 24 hours.</p>
+  <p class="about-text" style="margin-bottom:22px" data-en="Applying for CS / EE master's programs (Fall 2027). Always open to research collaboration and internship opportunities — I usually reply within 24 hours." data-zh="正在申请 CS / EE 硕士项目（2027 秋入学）。欢迎科研合作与实习机会的联系，通常 24 小时内回复。">Applying for CS / EE master's programs (Fall 2027). Always open to research collaboration and internship opportunities — I usually reply within 24 hours.</p>
   <div class="contact-list">
     <div class="contact-item">
-      <span class="icon">✉️</span><span class="label">Gmail</span>
-      <a href="mailto:tc19300480704@gmail.com">tc19300480704@gmail.com</a>
-      <button class="copy-btn" data-copy="tc19300480704@gmail.com" data-en="COPY" data-zh="复制">COPY</button>
+      <span class="icon">✉️</span><span class="label">Email</span>
+      <a href="mailto:EdelweissStar2026@126.com">EdelweissStar2026@126.com</a>
+      <button class="copy-btn" data-copy="EdelweissStar2026@126.com" data-en="COPY" data-zh="复制">COPY</button>
     </div>
     <div class="contact-item">
-      <span class="icon">📮</span><span class="label">QQ</span>
-      <a href="mailto:2957972276@qq.com">2957972276@qq.com</a>
-      <button class="copy-btn" data-copy="2957972276@qq.com" data-en="COPY" data-zh="复制">COPY</button>
+      <span class="icon">📮</span><span class="label">Gmail</span>
+      <a href="mailto:tc19300480704@gmail.com">tc19300480704@gmail.com</a>
+      <button class="copy-btn" data-copy="tc19300480704@gmail.com" data-en="COPY" data-zh="复制">COPY</button>
     </div>
     <div class="contact-item">
       <span class="icon">🐙</span><span class="label">GitHub</span>
@@ -353,7 +558,7 @@
 </section>
 
 <footer>
-  <p>© <span id="year">2026</span> <span class="g" data-en="Chen Rushi" data-zh="陈儒石">Chen Rushi</span> · <span data-en="Built with pure HTML/CSS/JS · Hosted on GitHub Pages" data-zh="纯 HTML/CSS/JS 构建 · 托管于 GitHub Pages">Built with pure HTML/CSS/JS · Hosted on GitHub Pages</span></p>
+  <p>© <span id="year">2026</span> <span class="g" data-en="Rushi Chen" data-zh="陈儒石">Rushi Chen</span> · <span data-en="Built with pure HTML/CSS/JS · Hosted on GitHub Pages" data-zh="纯 HTML/CSS/JS 构建 · 托管于 GitHub Pages">Built with pure HTML/CSS/JS · Hosted on GitHub Pages</span></p>
 </footer>
 
 <script>
